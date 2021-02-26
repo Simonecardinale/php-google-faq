@@ -1,0 +1,21 @@
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+h2 {
+    margin: 0;
+    line-height: 32px;
+    padding: 64px 0px 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+}
+
+p {
+    margin: 0px 0px 10px;
+    line-height: 1.6;
+    padding: 20px 0px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
