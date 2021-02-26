@@ -51,7 +51,9 @@
             "domanda" => "Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?",
             "risposta" =>"<p>In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di <a href=#>URL referrer</a>. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili <a href=#>qui</a>. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio.</p>",
         ]
-    ]
+        ];
+
+    // $navArray = ["Introduzione", "Norme sulla privacy", "Termini di servizio", "Tecnologie", "Domande frequenti"]
 ?>
 
 <!DOCTYPE html>
@@ -62,14 +64,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@100;400&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <div class="nav-top">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png" alt="">
+            <h2>Privacy e termini</h2>
+        </div>
+        <div class="nav-bottom">
+            <!-- <?php foreach($navArray as $item){ ?>
+                <ul>
+                    <li><a href=""><?php echo $item ?></a></li>
+                </ul>
+                <?php }?> -->
+                <ul>
+                    <li><a href="">Intronduzione</a></li>
+                    <li><a href="">Norme sulla privacy</a></li>
+                    <li><a href="">Termini di servizio</a></li>
+                    <li><a href="">Tecnologie</a></li>
+                    <li><a href="">Domande frequenti</a></li>
+                </ul>
+        </div>
+    </nav>
     <div class="container">
         <?php foreach($faqArray as $element){?>
     
-            <h2><?php echo $element["domanda"]?></h2>
+            <h2 class="title"><?php echo $element["domanda"]?></h2>
             <p><?php echo $element["risposta"]?></p>
     
         <?php }?>
