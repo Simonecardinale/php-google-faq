@@ -54,6 +54,7 @@
         ];
 
     // $navArray = ["Introduzione", "Norme sulla privacy", "Termini di servizio", "Tecnologie", "Domande frequenti"]
+    $footerArray = ["Google", "Tutto su Google", "Privacy", "Termini"];
 ?>
 
 <!DOCTYPE html>
@@ -72,8 +73,14 @@
 <body>
     <nav>
         <div class="nav-top">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png" alt="">
-            <h2>Privacy e termini</h2>
+            <div class="title-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png" alt="">
+                <h2>Privacy e termini</h2>
+            </div>
+            <div class="account-container">
+                <i class="fas fa-grip-vertical mgr_20"></i>
+                <p>S</p>
+            </div>
         </div>
         <div class="nav-bottom">
             <!-- <?php foreach($navArray as $item){ ?>
@@ -98,6 +105,26 @@
     
         <?php }?>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="container-text-footer">
+                <?php foreach($footerArray as $value){ ?>
+                    <span><?php echo $value ?></span>
+                    <?php }?>
+            </div>
+            <div class="language-container">
+                <i class="fas fa-comment-alt"></i>
+                <select name="" id="">
+                    <option value="">Italiano</option>
+                    <option value="">Inglese</option>
+                    <option value="">Francese</option>
+                    <option value="">Tedesco</option>
+                    <option value="">Polacco</option>
+                </select>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>
